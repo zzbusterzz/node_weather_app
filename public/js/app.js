@@ -1,4 +1,4 @@
-var url = 'http://localhost:3000/weather?address='
+var url = '/weather?address='
 
 const weatherform = document.querySelector('form');
 const input = document.querySelector('input');
