@@ -20,9 +20,9 @@ exports.forecast = (lat, lon, unit='m', callback) => {
             //console.log(response.body.error.info)
         }
         else{
-            const {temperature, feelslike, weather_descriptions} = body.current;
+            const {temperature, feelslike, weather_descriptions, weather_icons, pressure, uv_index, humidity, precip, wind_speed, wind_dir} = body.current;
             //console.log( currernt.weather_descriptions[0] + `. It is currently ${currernt.temperature} kelvin and feels like ${currernt.feelslike} kelvin`)
-            callback(undefined, { weather_descriptions , temperature ,feelslike})
+            callback(undefined, { temperature, feelslike, weather_descriptions, weather_icons, pressure, uv_index, humidity, precip, wind_speed, wind_dir})
         }
     });
 }

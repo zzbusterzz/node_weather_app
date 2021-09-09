@@ -9,6 +9,12 @@ body{
     min-height: 100vh;
 }
 
+.divSpecial {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
 .multiline {
     padding: 16px 0;
     white-space: pre-wrap;
@@ -57,4 +63,8 @@ header a{
 .portrait{
     width: 250px;
     margin-top: 16px;
+}
+
+.display-portrait{
+    object-fit: contain;
 }

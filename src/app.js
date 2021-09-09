@@ -72,7 +72,7 @@ app.get('/weather', (req, res) => {
         else{
             console.log('Data', latitude, longitude)
             //const  = data;
-            forecast(latitude, longitude, 'm' ,(error,  { weather_descriptions , temperature ,feelslike} = {}) => {
+            forecast(latitude, longitude, 'm' ,(error,  { temperature, feelslike, weather_descriptions, weather_icons, pressure, uv_index, humidity, precip, wind_speed, wind_dir} = {}) => {
                 if(error)
                     res.send({error})
                 else{
@@ -81,7 +81,10 @@ app.get('/weather', (req, res) => {
                     res.send({
                         address,
                         place_name,
-                        forecast: `Current weather is ${weather_descriptions}. Temprature is ${temperature}°C and feels like ${feelslike}°C`
+                        forecast: `Current weather is ${weather_descriptions}. Temprature is ${temperature}°C, feels like ${feelslike}°C. Humidity is ${humidity}% with chance of rain ${precip}%`,
+                        weather_icons, 
+                        wind_data:`Pressure is ${pressure} mb.\nWind is blowing at speed ${wind_speed} Km/hr with direction ${wind_dir}`,
+                        uv_index                        
                     })
                 }
             })
