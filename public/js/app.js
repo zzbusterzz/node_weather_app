@@ -19,13 +19,9 @@ weatherform.addEventListener('submit', (event) => {
                 {
                     msg1.textContent = data.error;
                 }
-                    //console.log(data.error)
                 else
                 {
                     const {address, place_name, forecast} = data;
-                    // console.log(address)
-                    // console.log(place_name)
-                    // console.log(forecast)
                     msg1.textContent = `Location: ${place_name}`;
                     msg2.textContent = `Forecast: ${forecast}`;
                 }
