@@ -8,7 +8,7 @@ const msg2 = document.querySelector('#msg2');
 weatherform.addEventListener('submit', (event) => {
     const address = input.value;
     event.preventDefault(); 
-
+ 
     console.log(address);
     msg1.textContent = "Loading...";
     msg2.textContent = "";
